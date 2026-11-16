@@ -1,0 +1,13 @@
+{
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "detector_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "depth_model": "depth-anything/Depth-Anything-V2-Small-hf",
+  "depth_revision": "5426e4f0f36572d16453bbda7a8389317b1bef99",
+  "prompts": ["chair", "table", "sofa", "cabinet", "door", "lamp", "cup", "bottle", "book", "laptop", "television", "remote control", "light switch", "drawer handle"],
+  "box_threshold": 0.30,
+  "text_threshold": 0.25,
+  "nms_iou": 0.60,
+  "shortest_edge": 640,
+  "longest_edge": 960,
+  "depth_size": 518
+}

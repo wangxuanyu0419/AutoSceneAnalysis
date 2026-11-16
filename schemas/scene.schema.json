@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AutoScene snapshot with object and action candidates",
+  "type": "object",
+  "required": ["schema_version", "frame_id", "image_sha256", "image_size_px", "id_scope", "geometry", "models", "objects", "relations", "decoder_interface"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "frame_id": {"type": "string"},
+    "image_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "image_size_px": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 2, "maxItems": 2},
+    "id_scope": {"const": "snapshot_only"},
+    "geometry": {
+      "type": "object", "required": ["type", "units", "metric_scale_available"],
+      "properties": {"type": {"const": "relative_inverse_depth"}, "units": {"const": "arbitrary"}, "metric_scale_available": {"const": false}}
+    },
+    "objects": {"type": "array", "items": {"$ref": "#/$defs/object"}},
+    "decoder_interface": {
+      "type": "object", "required": ["object_ids", "action_vocabulary", "suggestion_mask", "controls", "neural_decoder_connected"],
+      "properties": {
+        "object_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "action_vocabulary": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "suggestion_mask": {"type": "array", "items": {"type": "array", "items": {"enum": [0, 1]}}},
+        "neural_decoder_connected": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "object": {
+      "type": "object",
+      "required": ["id", "label", "detector_score", "bbox_xyxy_px", "center_xy_normalized", "relative_inverse_depth", "position_m", "action_candidates"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^obj_[0-9]{4,}$"}, "label": {"type": "string", "minLength": 1},
+        "detector_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "bbox_xyxy_px": {"type": "array", "items": {"type": "number", "minimum": 0}, "minItems": 4, "maxItems": 4},
+        "center_xy_normalized": {"type": "array", "items": {"type": "number", "minimum": 0, "maximum": 1}, "minItems": 2, "maxItems": 2},
+        "relative_inverse_depth": {"type": ["number", "null"]},
+        "position_m": {"type": "null"},
+        "action_candidates": {"type": "array", "items": {
+          "type": "object", "required": ["action", "evidence", "feasibility"],
+          "properties": {"action": {"type": "string"}, "evidence": {"const": "hand_written_category_rule"}, "feasibility": {"const": "unknown"}}
+        }}
+      }
+    }
+  }
+}

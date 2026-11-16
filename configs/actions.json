@@ -1,0 +1,20 @@
+{
+  "description": "Hand-written semantic suggestions for a mouse-driven interface demo. These do not establish physical feasibility.",
+  "actions": ["inspect", "grasp", "move", "open", "close", "press", "switch_on", "switch_off", "sit_on"],
+  "rules": {
+    "chair": ["inspect", "move", "sit_on"],
+    "table": ["inspect"],
+    "sofa": ["inspect", "sit_on"],
+    "cabinet": ["inspect", "open", "close"],
+    "door": ["inspect", "open", "close"],
+    "lamp": ["inspect", "switch_on", "switch_off"],
+    "cup": ["inspect", "grasp", "move"],
+    "bottle": ["inspect", "grasp", "move", "open", "close"],
+    "book": ["inspect", "grasp", "move", "open", "close"],
+    "laptop": ["inspect", "open", "close"],
+    "television": ["inspect", "switch_on", "switch_off"],
+    "remote control": ["inspect", "grasp", "press"],
+    "light switch": ["inspect", "press"],
+    "drawer handle": ["inspect", "grasp", "open", "close"]
+  }
+}

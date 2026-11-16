@@ -1,0 +1,316 @@
+{
+  "date": "2026-11-16",
+  "scope": "Repeated single public image; not an accuracy benchmark",
+  "runs": [
+    {
+      "run_id": "coco-baseline",
+      "metrics": {
+        "mode": "model_inference",
+        "device": "cuda:0",
+        "device_name": "NVIDIA RTX A2000 12GB",
+        "precision": "float32",
+        "repeats": 10,
+        "warmups": 1,
+        "cpu_threads": 4,
+        "model_load_and_download_ms": 94711.13560000231,
+        "first_perception_ms": 23164.47629999675,
+        "samples": [
+          {
+            "detection_ms": 641.6615999987698,
+            "depth_ms": 37.96950000105426,
+            "perception_ms": 679.6310999998241
+          },
+          {
+            "detection_ms": 374.1937000013422,
+            "depth_ms": 36.58439999708207,
+            "perception_ms": 410.7780999984243
+          },
+          {
+            "detection_ms": 378.41409999964526,
+            "depth_ms": 37.38130000056117,
+            "perception_ms": 415.7954000002064
+          },
+          {
+            "detection_ms": 377.43869999758317,
+            "depth_ms": 39.11370000059833,
+            "perception_ms": 416.5523999981815
+          },
+          {
+            "detection_ms": 383.7208999975701,
+            "depth_ms": 36.78630000285921,
+            "perception_ms": 420.5072000004293
+          },
+          {
+            "detection_ms": 381.4189999975497,
+            "depth_ms": 37.181200001214165,
+            "perception_ms": 418.60019999876386
+          },
+          {
+            "detection_ms": 383.5914999981469,
+            "depth_ms": 37.34289999920293,
+            "perception_ms": 420.93439999734983
+          },
+          {
+            "detection_ms": 378.54130000050645,
+            "depth_ms": 36.63859999869601,
+            "perception_ms": 415.17989999920246
+          },
+          {
+            "detection_ms": 369.8863999998139,
+            "depth_ms": 37.78800000145566,
+            "perception_ms": 407.67440000126953
+          },
+          {
+            "detection_ms": 389.0342000013334,
+            "depth_ms": 36.929800000507385,
+            "perception_ms": 425.96400000184076
+          }
+        ],
+        "peak_torch_allocated_mib": 1563.21484375,
+        "peak_torch_reserved_mib": 1858.0,
+        "perception_ms": {
+          "p50": 417.5762999984727,
+          "p95": 565.4809050007314
+        },
+        "scope": "CPU preprocessing, transfer, detection, postprocessing and relative depth; synchronized CUDA; excludes camera, report, neural decoder and robot",
+        "package_versions": {
+          "torch": "2.7.1+cu126",
+          "torchvision": "0.22.1+cu126",
+          "transformers": "4.57.1",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.19045-SP0",
+        "scene_assembly_ms": 2.036400001088623,
+        "image_size_px": [
+          640,
+          426
+        ],
+        "input_file_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "hash_definition": "scene hash covers upright decoded RGB pixels; input_file_sha256 covers original file bytes"
+      },
+      "models": {
+        "detector": {
+          "id": "IDEA-Research/grounding-dino-tiny",
+          "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+        },
+        "depth": {
+          "id": "depth-anything/Depth-Anything-V2-Small-hf",
+          "revision": "5426e4f0f36572d16453bbda7a8389317b1bef99"
+        },
+        "precision": "float32",
+        "segmentation": "not_implemented"
+      },
+      "effective_config": {
+        "detector": "IDEA-Research/grounding-dino-tiny",
+        "detector_revision": "main",
+        "depth_model": "depth-anything/Depth-Anything-V2-Small-hf",
+        "depth_revision": "main",
+        "prompts": [
+          "chair",
+          "table",
+          "sofa",
+          "cabinet",
+          "door",
+          "lamp",
+          "cup",
+          "bottle",
+          "book",
+          "laptop",
+          "television",
+          "remote control",
+          "light switch",
+          "drawer handle"
+        ],
+        "box_threshold": 0.3,
+        "text_threshold": 0.25,
+        "nms_iou": 0.6,
+        "shortest_edge": 640,
+        "longest_edge": 960,
+        "depth_size": 518
+      },
+      "object_candidate_count": 30
+    },
+    {
+      "run_id": "coco-rtx2060",
+      "metrics": {
+        "mode": "model_inference",
+        "device": "cuda:1",
+        "device_name": "NVIDIA GeForce RTX 2060",
+        "precision": "float32",
+        "repeats": 20,
+        "warmups": 2,
+        "cpu_threads": 4,
+        "model_load_and_download_ms": 1453.2485999989149,
+        "first_perception_ms": 2375.0337999990734,
+        "samples": [
+          {
+            "detection_ms": 380.9822000002896,
+            "depth_ms": 49.69459999847459,
+            "perception_ms": 430.6767999987642
+          },
+          {
+            "detection_ms": 434.676999997464,
+            "depth_ms": 56.73500000193599,
+            "perception_ms": 491.4119999994
+          },
+          {
+            "detection_ms": 363.3552999999665,
+            "depth_ms": 43.57280000112951,
+            "perception_ms": 406.928100001096
+          },
+          {
+            "detection_ms": 377.04540000049747,
+            "depth_ms": 46.784199999819975,
+            "perception_ms": 423.82960000031744
+          },
+          {
+            "detection_ms": 391.2460999999894,
+            "depth_ms": 53.57699999876786,
+            "perception_ms": 444.82309999875724
+          },
+          {
+            "detection_ms": 408.0993999996281,
+            "depth_ms": 40.796000001137145,
+            "perception_ms": 448.8954000007652
+          },
+          {
+            "detection_ms": 386.81240000005346,
+            "depth_ms": 54.99499999859836,
+            "perception_ms": 441.8073999986518
+          },
+          {
+            "detection_ms": 437.55679999958375,
+            "depth_ms": 49.4074999987788,
+            "perception_ms": 486.96429999836255
+          },
+          {
+            "detection_ms": 409.2854999980773,
+            "depth_ms": 42.53200000312063,
+            "perception_ms": 451.8175000011979
+          },
+          {
+            "detection_ms": 366.38000000311877,
+            "depth_ms": 43.593200000032084,
+            "perception_ms": 409.97320000315085
+          },
+          {
+            "detection_ms": 355.34659999757423,
+            "depth_ms": 48.354000002291286,
+            "perception_ms": 403.7005999998655
+          },
+          {
+            "detection_ms": 389.4040000013774,
+            "depth_ms": 42.53249999965192,
+            "perception_ms": 431.93650000102934
+          },
+          {
+            "detection_ms": 389.39579999714624,
+            "depth_ms": 40.76570000324864,
+            "perception_ms": 430.1615000003949
+          },
+          {
+            "detection_ms": 374.30159999712487,
+            "depth_ms": 37.19149999960791,
+            "perception_ms": 411.4930999967328
+          },
+          {
+            "detection_ms": 371.3313999978709,
+            "depth_ms": 49.45500000030734,
+            "perception_ms": 420.78639999817824
+          },
+          {
+            "detection_ms": 389.7341999982018,
+            "depth_ms": 51.978800001961645,
+            "perception_ms": 441.71300000016345
+          },
+          {
+            "detection_ms": 395.4529000002367,
+            "depth_ms": 47.31319999700645,
+            "perception_ms": 442.76609999724315
+          },
+          {
+            "detection_ms": 405.69390000018757,
+            "depth_ms": 47.570599999744445,
+            "perception_ms": 453.264499999932
+          },
+          {
+            "detection_ms": 350.72780000336934,
+            "depth_ms": 45.356999999057734,
+            "perception_ms": 396.0848000024271
+          },
+          {
+            "detection_ms": 380.7782000003499,
+            "depth_ms": 41.52330000215443,
+            "perception_ms": 422.3015000025043
+          }
+        ],
+        "peak_torch_allocated_mib": 1563.21484375,
+        "peak_torch_reserved_mib": 1858.0,
+        "perception_ms": {
+          "p50": 431.30664999989676,
+          "p95": 487.1866849984144
+        },
+        "scope": "CPU preprocessing, transfer, detection, postprocessing and relative depth; synchronized CUDA; excludes camera, report, neural decoder and robot",
+        "package_versions": {
+          "torch": "2.7.1+cu126",
+          "torchvision": "0.22.1+cu126",
+          "transformers": "4.57.1",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.19045-SP0",
+        "scene_assembly_ms": 3.9563999998790678,
+        "image_size_px": [
+          640,
+          426
+        ],
+        "input_file_sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+        "hash_definition": "scene hash covers upright decoded RGB pixels; input_file_sha256 covers original file bytes"
+      },
+      "models": {
+        "detector": {
+          "id": "IDEA-Research/grounding-dino-tiny",
+          "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+        },
+        "depth": {
+          "id": "depth-anything/Depth-Anything-V2-Small-hf",
+          "revision": "5426e4f0f36572d16453bbda7a8389317b1bef99"
+        },
+        "precision": "float32",
+        "segmentation": "not_implemented"
+      },
+      "effective_config": {
+        "detector": "IDEA-Research/grounding-dino-tiny",
+        "detector_revision": "main",
+        "depth_model": "depth-anything/Depth-Anything-V2-Small-hf",
+        "depth_revision": "main",
+        "prompts": [
+          "chair",
+          "table",
+          "sofa",
+          "cabinet",
+          "door",
+          "lamp",
+          "cup",
+          "bottle",
+          "book",
+          "laptop",
+          "television",
+          "remote control",
+          "light switch",
+          "drawer handle"
+        ],
+        "box_threshold": 0.3,
+        "text_threshold": 0.25,
+        "nms_iou": 0.6,
+        "shortest_edge": 640,
+        "longest_edge": 960,
+        "depth_size": 518
+      },
+      "object_candidate_count": 30
+    }
+  ]
+}
