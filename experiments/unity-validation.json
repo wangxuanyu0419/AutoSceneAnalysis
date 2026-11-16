@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-16",
+  "scene_version": "photo-room-v1",
+  "geometry_method": "Manually authored approximation of COCO val2017 image 139; unmeasured dimensions",
+  "neural_data_used": false,
+  "software": {
+    "unity": "6000.4.7f1",
+    "unity_cli": "1.0.0",
+    "urp": "17.4.0",
+    "input_system": "1.19.0",
+    "xr_management": "4.5.4",
+    "cardboard_version": "1.36.0",
+    "cardboard_commit": "7fb2c0e438d2ef686f51cd59b53da16cc07b1b68"
+  },
+  "builds": {
+    "windows": {
+      "path": "unity/AutoSceneVR/Builds/Windows/RoomIntentionLab.exe",
+      "bytes": 667648,
+      "sha256": "f76f2b3c76a5951b76b4c5a38528f7f8df23795525d8836acc286e437b58bbf6"
+    },
+    "android": {
+      "path": "unity/AutoSceneVR/Builds/Android/RoomIntentionLab.apk",
+      "bytes": 95344563,
+      "sha256": "8bce31786f017d9128305fcac6a9b8c0b327c9ec55673d787d72420b8138d3cd"
+    }
+  },
+  "windows_runtime": {
+    "scene_version": "photo-room-v1",
+    "passed": true,
+    "frame_start": 22,
+    "frame_end": 288,
+    "device": "NVIDIA GeForce RTX 2060",
+    "checks": [
+      {
+        "name": "Stable authored target catalogue",
+        "passed": true
+      },
+      {
+        "name": "Rejects another scene version",
+        "passed": true
+      },
+      {
+        "name": "Rejects stale input",
+        "passed": true
+      },
+      {
+        "name": "Target axis selects the mug",
+        "passed": true
+      },
+      {
+        "name": "Rejects repeated sequence",
+        "passed": true
+      },
+      {
+        "name": "Rejects unsupported action",
+        "passed": true
+      },
+      {
+        "name": "Action axis starts explicit assisted reach",
+        "passed": true
+      },
+      {
+        "name": "Hand arrives at mug",
+        "passed": true
+      },
+      {
+        "name": "Near hand grasps movable mug",
+        "passed": true
+      },
+      {
+        "name": "Held object follows continuous motor input",
+        "passed": true
+      },
+      {
+        "name": "Expired velocity stops moving the hand",
+        "passed": true
+      },
+      {
+        "name": "Pause rejects motor commands",
+        "passed": true
+      },
+      {
+        "name": "Release restores object physics",
+        "passed": true
+      },
+      {
+        "name": "Drawer accepts open action",
+        "passed": true
+      },
+      {
+        "name": "Drawer animation moves its part",
+        "passed": true
+      },
+      {
+        "name": "The player advances frames",
+        "passed": true
+      },
+      {
+        "name": "Hidden-window capture renders scene content",
+        "passed": true
+      }
+    ]
+  },
+  "windows_external_input": {
+    "passed": true,
+    "checks": {
+      "external target selection": true,
+      "external action selection": true,
+      "external grasp creates contact": true,
+      "external release": true,
+      "streamed velocity accepted": true,
+      "no external messages rejected": true
+    },
+    "input_source": "synthetic external messages",
+    "neural_data_used": false
+  },
+  "android": {
+    "tested_phone": "Huawei MAR-LX1B",
+    "tested_os": "Android 10 / API 29",
+    "build_min_api": 26,
+    "build_target_api": 35,
+    "architectures": [
+      "ARMv7",
+      "ARM64"
+    ],
+    "graphics": "OpenGL ES 3",
+    "installed_and_running": true,
+    "stereo_screenshot_visually_inspected": true,
+    "cardboard_input_and_display_initialized": true,
+    "gyroscope_initialized": true,
+    "head_pose_reaches_camera": true,
+    "wearer_test_completed": false,
+    "renkforce_lens_calibration_completed": false,
+    "neural_acquisition_clock_synchronized": false,
+    "external_input": {
+      "passed": true,
+      "checks": {
+        "external target selection": true,
+        "external assisted reach": true,
+        "external grasp creates contact": true,
+        "streamed velocity accepted": true,
+        "external release": true,
+        "no external messages rejected": true
+      },
+      "scene_version": "photo-room-v1",
+      "input_source": "synthetic USB messages",
+      "neural_data_used": false,
+      "accepted_messages": 27,
+      "messages_sent": 27,
+      "clock_probes": [
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 53.51,
+          "clock_offset_ms": -830.69,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 55.04,
+          "clock_offset_ms": -827.37,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 57.44,
+          "clock_offset_ms": -827.22,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 76.65,
+          "clock_offset_ms": -817.75,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 21,
+          "clock_probe_round_trip_ms": 79.09,
+          "clock_offset_ms": -819.11,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 79.63,
+          "clock_offset_ms": -818.62,
+          "scene_version": "photo-room-v1"
+        },
+        {
+          "simulated_inputs_sent": 1,
+          "clock_probe_round_trip_ms": 81.86,
+          "clock_offset_ms": -817.0,
+          "scene_version": "photo-room-v1"
+        }
+      ],
+      "observed_frame_cadence_fps": 38.35,
+      "observation_seconds": 9.05,
+      "unique_head_rotations_logged": 121,
+      "timing_scope": "Application frame counter divided by elapsed phone UTC; not motion-to-photon latency",
+      "wearer_and_optical_calibration_verified": false
+    }
+  },
+  "raw_results_local_only": [
+    "outputs/unity-session-20261116T161255059Z",
+    "outputs/unity-file-adapter-final",
+    "outputs/unity-phone-input-final"
+  ],
+  "limitations": [
+    "Fixed hand orientation and binary grasp",
+    "One kinematic right arm",
+    "Symbolic cabinet/switch actions do not require fingertip contact",
+    "Phone head orientation only; no positional or hand tracking",
+    "Short frame-cadence observation; no acquisition-to-display or motion-to-photon measurement",
+    "No neural decoder or implanted device connected"
+  ]
+}

@@ -41,6 +41,8 @@ On this workstation, open the already generated [RTX 2060 report](outputs/coco-r
 
 The new [Unity quickstart](docs/unity-quickstart.md) describes the editable room, object/action controls, virtual hand and robot arm, Android phone viewing, and the decoder-input boundary. The project is under `unity/AutoSceneVR`, targeting Unity 6000.4.7f1. [Simulation design](docs/vr-simulation-design.md) explains the relationship between the photo, the authored room, and future neural input.
 
+The room is a manually authored approximation of the photo with added training props. The Windows demo runs independently of the editor, and the Android APK is installed on the prototype phone. The [Unity experiment](experiments/2026-11-16-unity.md) records interaction tests, USB input, and phone verification. From this workstation, start the demo with `scripts/launch_unity_demo.ps1`; add `-Verify` for hidden automated checks.
+
 ## Repository contents
 
 | Folder | Contents |
@@ -49,9 +51,9 @@ The new [Unity quickstart](docs/unity-quickstart.md) describes the editable room
 | `docs/` | Architecture and design decisions |
 | `resources/` | Primary-source catalogue and guided reading |
 | `src/autoscene/` | Perception baseline, scene export, and offline report |
-| `scripts/` | Demo entry point and public sample downloader |
+| `scripts/` | Vision demo, Unity launcher, decoder-input examples and integration checks |
 | `configs/` | Object prompts and demonstration action vocabulary |
-| `schemas/` | Versioned scene output contract |
+| `schemas/` | Versioned perception output and simulation intent contracts |
 | `tests/` | Geometry conventions and selection contract checks |
 | `experiments/` | Small reproducible results and environment records |
 | `unity/` | Interactive room simulation, virtual arm and phone VR support |

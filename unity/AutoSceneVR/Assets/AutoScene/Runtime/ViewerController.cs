@@ -45,7 +45,8 @@ namespace AutoSceneVR
             var tracked = viewCamera.gameObject.AddComponent<TrackedPoseDriver>();
             tracked.positionInput = new InputActionProperty(new InputAction("Head position", binding: "<XRHMD>/centerEyePosition"));
             tracked.rotationInput = new InputActionProperty(new InputAction("Head rotation", binding: "<XRHMD>/centerEyeRotation"));
-            tracked.trackingStateInput = new InputActionProperty(new InputAction("Head tracking", binding: "<XRHMD>/trackingState"));
+            // Match Cardboard's sample: its eye-pose controls are usable without a
+            // generic trackingState binding, which can otherwise suppress the pose.
             if (Application.platform == RuntimePlatform.Android) {
                 Screen.orientation = ScreenOrientation.LandscapeLeft;
                 QualitySettings.shadows = ShadowQuality.Disable;

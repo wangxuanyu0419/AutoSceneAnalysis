@@ -1,6 +1,6 @@
 # Roadmap for the environment and intention interface
 
-The next milestone is a measured room-target experiment. The current implementation is a photo baseline with an inspectable scene contract. It lets us improve perception without redesigning the object/action interface each time.
+The next perception milestone is a measured room-target experiment. The current implementation includes a photo baseline and a separate, authored Unity simulation. The shared object/action idea lets us improve perception and test control tasks without redesigning the intent interface each time.
 
 ## Next experiment
 
@@ -14,12 +14,16 @@ Compare the current baseline with one mask-producing detector and one metric-geo
 | --- | --- | --- |
 | Research foundation | Briefings, source catalogue, architecture, and staged deployment plan | Implemented |
 | Photo interface | Real model inference, object/action JSON, timing, and mouse report | See first experiment |
+| Spatial control prototype | Editable room, virtual arm, Windows checks, Android stereo and synthetic decoder input | See [Unity experiment](../experiments/2026-11-16-unity.md) |
+| Phone VR fit and timing | Viewer profile, wearer head rotation, seated alignment, sustained frame timing | Next simulation check |
 | Room target evaluation | Held-out recall, precision, part recall, and latency | Next |
 | Metric geometry | Measured surface-point error and camera convention checks | Planned |
 | Persistent scan map | Same target keeps its ID across views and revisits | Planned |
 | Functional interactions | Part links, object state, and grounded action evidence | Planned |
 | Decoder synchronization | Versioned target slots and synchronized replay | Planned |
 | Implanted neural decoding | Held-out target/action results against context-only and neural-only baselines | Planned |
+
+For the simulation, start with the mug-to-tray task. Add trial cues, success regions, movement-time and path-error scoring, then replay synthetic decoder outputs with known noise and delay. Compare continuous velocity control with explicit assisted reach. Only after those baselines are clear should neural replay and acquisition-clock alignment enter the same task.
 
 ## Decisions to carry forward
 
