@@ -1,0 +1,19 @@
+{
+  "scene_version": "photo-room-v1",
+  "reference": {
+    "dataset": "COCO val2017",
+    "image_id": 139,
+    "url": "http://images.cocodataset.org/val2017/000000000139.jpg",
+    "image_redistributed": false
+  },
+  "geometry_method": "Manually authored low-poly approximation of the reference image, generated into a saved scene with Unity APIs",
+  "dimensions_unity_m": {"width": 8.4, "depth": 7.4, "height": 2.9},
+  "dimension_source": "Provisional author estimates; not calibrated or recovered from the relative-depth baseline",
+  "coordinate_system": "Unity x right, y up, z forward; simulation origin is authored",
+  "photo_based_elements": ["wood floor", "rear windows", "radiator", "dining table", "chairs", "television and console", "kitchen cabinets", "fireplace", "green vase", "pendant lamp"],
+  "added_experiment_elements": ["training mug", "training book", "placement tray", "gaze command panel", "virtual arm"],
+  "identity_scope": "Stable authored simulation IDs; not persistent identities of physical objects",
+  "embodiment": "One kinematic right arm with a simplified hand or robot appearance; three-dimensional endpoint velocity and binary grasp",
+  "headset_input": "Cardboard phone head orientation; no phone-based hand tracking or positional head tracking",
+  "future_pc_vr": "Another XR provider can be added without replacing the task and intent interface"
+}

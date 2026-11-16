@@ -37,7 +37,11 @@ See the [first experiment](experiments/2026-11-16-baseline.md) for the measured 
 
 On this workstation, open the already generated [RTX 2060 report](outputs/coco-rtx2060/report.html) or [synthetic interface example](outputs/interface-example/report.html). These are local generated files and are not part of a Git clone.
 
-## Repository map
+## Unity room simulation
+
+The new [Unity quickstart](docs/unity-quickstart.md) describes the editable room, object/action controls, virtual hand and robot arm, Android phone viewing, and the decoder-input boundary. The project is under `unity/AutoSceneVR`, targeting Unity 6000.4.7f1. [Simulation design](docs/vr-simulation-design.md) explains the relationship between the photo, the authored room, and future neural input.
+
+## Repository contents
 
 | Folder | Contents |
 | --- | --- |
@@ -50,6 +54,7 @@ On this workstation, open the already generated [RTX 2060 report](outputs/coco-r
 | `schemas/` | Versioned scene output contract |
 | `tests/` | Geometry conventions and selection contract checks |
 | `experiments/` | Small reproducible results and environment records |
+| `unity/` | Interactive room simulation, virtual arm and phone VR support |
 | `data/`, `outputs/`, `.cache/` | Local images, generated reports, and caches; ignored by Git |
 
 ## Continue the work

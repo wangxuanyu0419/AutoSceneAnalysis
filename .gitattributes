@@ -4,3 +4,9 @@
 *.json text eol=lf
 *.toml text eol=lf
 *.ps1 text eol=crlf
+*.cs text eol=lf
+# Unity writes a trailing space for empty YAML values; preserve its serializer output.
+*.meta text eol=lf whitespace=-blank-at-eol
+*.unity text eol=lf whitespace=-blank-at-eol
+*.asset text eol=lf whitespace=-blank-at-eol
+*.mat text eol=lf whitespace=-blank-at-eol

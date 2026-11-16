@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Unity room intent input",
+  "type": "object",
+  "required": ["schema_version", "scene_version", "source", "sequence", "timestamp_unix_ms", "command"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scene_version": {"const": "photo-room-v1"},
+    "source": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
+    "timestamp_unix_ms": {"type": "number"},
+    "command": {"enum": ["select", "act", "velocity", "stop", "resume", "reset"]},
+    "target_id": {"type": "string"},
+    "action": {"type": "string"},
+    "velocity": {
+      "type": "object", "required": ["x", "y", "z"],
+      "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "z": {"type": "number"}}
+    },
+    "ttl_ms": {"type": "integer", "minimum": 20, "maximum": 250}
+  },
+  "allOf": [
+    {"if": {"properties": {"command": {"const": "select"}}}, "then": {"required": ["target_id"]}},
+    {"if": {"properties": {"command": {"const": "act"}}}, "then": {"required": ["action"]}},
+    {"if": {"properties": {"command": {"const": "velocity"}}}, "then": {"required": ["velocity", "ttl_ms"]}}
+  ]
+}
