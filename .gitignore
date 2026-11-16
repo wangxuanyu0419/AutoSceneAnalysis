@@ -34,3 +34,5 @@ unity/**/Assets/TutorialInfo/
 unity/**/Assets/TutorialInfo.meta
 unity/**/Assets/Readme.asset*
 unity/**/Assets/Scenes/SampleScene.unity*
+unity/**/Assets/ReconstructionGenerated/
+unity/**/Assets/ReconstructionGenerated.meta

@@ -1,0 +1,376 @@
+{
+  "date": "2026-11-16",
+  "implementation": "Image-grounded visible-surface reconstruction; complete hidden geometry is not recovered",
+  "reference": {
+    "image": "COCO val2017 image 139",
+    "image_rgb_sha256": "49e1682eddd63940370376db6dbbc90aaf08a758dd5731ac7479e73cac57f5c1",
+    "guided_object_regions": 13,
+    "review_source": "Assistant-reviewed 2D outlines, no measured 3D positions",
+    "provenance": {
+      "mode": "reviewed 2D observations; automatic geometry",
+      "model": "Ruicheng/moge-2-vitb-normal",
+      "model_revision": "ca5f0e07ff01d3e5a364c1d954ed12ee1814b368",
+      "moge_code_revision": "74fbce054ebed49800de42d0ad0e83495065719a",
+      "utils_revision": "62f09d58509485564e24d5d9f6aac9ee9ebc0c37",
+      "resolution_level": 5,
+      "known_camera_fov": null,
+      "height_calibration": {
+        "applied": false
+      },
+      "geometry_inference_ms": 134758.53859999916,
+      "cold_model_load_and_download_ms": 22123.163300006127,
+      "device": "NVIDIA GeForce RTX 2060",
+      "ground_truth_scene_used": false,
+      "refinement": "Reused the same predicted geometry; refined image regions and mesh sampling only"
+    },
+    "floor_estimate": {
+      "accepted": true,
+      "support_fraction": 0.8275,
+      "residual_median_m": 0.0035307109355926514,
+      "camera_height_estimate_m": 0.8366067409515381,
+      "scale": "model estimate, uncalibrated"
+    },
+    "source_view_rgb_mae_0_255": 2.50479508998435,
+    "source_view_pixels_with_mean_rgb_error_below_20": 0.9839642018779343,
+    "image_metric_scope": "Input texture reused; source-camera alignment only, not metric geometry accuracy",
+    "automatic_candidate_count": 25,
+    "automatic_labels": [
+      "television",
+      "window",
+      "bed",
+      "table",
+      "cabinet",
+      "cabinet",
+      "window",
+      "table",
+      "cabinet",
+      "television",
+      "chair",
+      "chair",
+      "window",
+      "chair",
+      "vase",
+      "cabinet",
+      "cabinet",
+      "cabinet",
+      "lamp",
+      "vase",
+      "vase",
+      "lamp",
+      "lamp",
+      "lamp",
+      "lamp"
+    ],
+    "known_automatic_failure_examples": [
+      "False bed candidate",
+      "Duplicate and ambiguous categories"
+    ],
+    "unknown_real_metric_accuracy": true
+  },
+  "benchmark": {
+    "model": "Ruicheng/moge-2-vitb-normal",
+    "model_revision": "ca5f0e07ff01d3e5a364c1d954ed12ee1814b368",
+    "device": "CPU / 4 PyTorch threads",
+    "input": "RGB + public camera FOV; separate optional measured-height variant; no reviewed outlines",
+    "truth_boundary": "evaluator only",
+    "metric_scope": "Visible depth at ray-sampled pixels. No complete-object 3D IoU or hidden-geometry claim.",
+    "summaries": {
+      "development": {
+        "metric_abs_rel": 0.1305531058460474,
+        "metric_rmse_m": 0.9860296696424484,
+        "delta_1_25": 0.9924932806520264,
+        "scale_aligned_abs_rel_diagnostic": 0.039316972717642784,
+        "constant_5m_abs_rel_baseline": 0.31961848586797714,
+        "height_calibrated_abs_rel": 0.1503428891301155,
+        "height_calibrated_rmse_m": 1.1069733649492264,
+        "target_recall_iou_025": 1.0,
+        "geometry_ms": 9090.725599999132,
+        "tv_cabinet_ordering": {
+          "correct": 4,
+          "eligible": 4,
+          "total_scenes": 4
+        }
+      },
+      "held_out": {
+        "metric_abs_rel": 0.1066921204328537,
+        "metric_rmse_m": 0.777839794754982,
+        "delta_1_25": 0.9939858041996873,
+        "scale_aligned_abs_rel_diagnostic": 0.025823522824794054,
+        "constant_5m_abs_rel_baseline": 0.31957609206438065,
+        "height_calibrated_abs_rel": 0.09039854444563389,
+        "height_calibrated_rmse_m": 0.6785438358783722,
+        "target_recall_iou_025": 1.0,
+        "geometry_ms": 7440.1985999975295,
+        "tv_cabinet_ordering": {
+          "correct": 4,
+          "eligible": 4,
+          "total_scenes": 4
+        }
+      }
+    },
+    "scenes": [
+      {
+        "seed": 100,
+        "split": "development",
+        "valid_depth_samples": 12700,
+        "metric_abs_rel": 0.09138577431440353,
+        "metric_rmse_m": 0.7611855864524841,
+        "delta_1_25": 0.9930708661417322,
+        "scale_aligned_abs_rel_diagnostic": 0.04248160123825073,
+        "evaluation_only_scale_factor": 1.1169447898864746,
+        "constant_5m_abs_rel_baseline": 0.3262624144554138,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 6,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.15529467165470123,
+        "height_calibrated_rmse_m": 1.1495755910873413,
+        "geometry_ms": 10896.524499999941,
+        "detector_and_relative_depth_ms": 12023.83479999844
+      },
+      {
+        "seed": 101,
+        "split": "development",
+        "valid_depth_samples": 12725,
+        "metric_abs_rel": 0.1506599485874176,
+        "metric_rmse_m": 1.1079075336456299,
+        "delta_1_25": 0.9898624754420432,
+        "scale_aligned_abs_rel_diagnostic": 0.0380210280418396,
+        "evaluation_only_scale_factor": 1.2016644477844238,
+        "constant_5m_abs_rel_baseline": 0.3228285014629364,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.1608796864748001,
+        "height_calibrated_rmse_m": 1.171538233757019,
+        "geometry_ms": 7761.553600001207,
+        "detector_and_relative_depth_ms": 9289.917900001456
+      },
+      {
+        "seed": 102,
+        "split": "development",
+        "valid_depth_samples": 12722,
+        "metric_abs_rel": 0.14727415144443512,
+        "metric_rmse_m": 1.1011838912963867,
+        "delta_1_25": 0.9937116805533721,
+        "scale_aligned_abs_rel_diagnostic": 0.0410308912396431,
+        "evaluation_only_scale_factor": 1.1925017833709717,
+        "constant_5m_abs_rel_baseline": 0.31829899549484253,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.1634088009595871,
+        "height_calibrated_rmse_m": 1.2011933326721191,
+        "geometry_ms": 9941.735299995344,
+        "detector_and_relative_depth_ms": 7782.1022999996785
+      },
+      {
+        "seed": 103,
+        "split": "development",
+        "valid_depth_samples": 12740,
+        "metric_abs_rel": 0.13289254903793335,
+        "metric_rmse_m": 0.973841667175293,
+        "delta_1_25": 0.9933281004709577,
+        "scale_aligned_abs_rel_diagnostic": 0.03573437035083771,
+        "evaluation_only_scale_factor": 1.170384407043457,
+        "constant_5m_abs_rel_baseline": 0.3110840320587158,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.1217883974313736,
+        "height_calibrated_rmse_m": 0.905586302280426,
+        "geometry_ms": 7763.089000000036,
+        "detector_and_relative_depth_ms": 7343.949000001885
+      },
+      {
+        "seed": 200,
+        "split": "held_out",
+        "valid_depth_samples": 12692,
+        "metric_abs_rel": 0.08371613174676895,
+        "metric_rmse_m": 0.6090524792671204,
+        "delta_1_25": 0.9949574535140245,
+        "scale_aligned_abs_rel_diagnostic": 0.02036304399371147,
+        "evaluation_only_scale_factor": 1.0952694416046143,
+        "constant_5m_abs_rel_baseline": 0.3267654776573181,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.0655336081981659,
+        "height_calibrated_rmse_m": 0.4983106255531311,
+        "geometry_ms": 7096.793400000024,
+        "detector_and_relative_depth_ms": 6125.716199996532
+      },
+      {
+        "seed": 201,
+        "split": "held_out",
+        "valid_depth_samples": 12715,
+        "metric_abs_rel": 0.11218450218439102,
+        "metric_rmse_m": 0.8674020171165466,
+        "delta_1_25": 0.9927644514353127,
+        "scale_aligned_abs_rel_diagnostic": 0.038292109966278076,
+        "evaluation_only_scale_factor": 1.1499038934707642,
+        "constant_5m_abs_rel_baseline": 0.3230058550834656,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.14409250020980835,
+        "height_calibrated_rmse_m": 1.0638866424560547,
+        "geometry_ms": 6893.902999996499,
+        "detector_and_relative_depth_ms": 6233.030999996117
+      },
+      {
+        "seed": 202,
+        "split": "held_out",
+        "valid_depth_samples": 12740,
+        "metric_abs_rel": 0.08305926620960236,
+        "metric_rmse_m": 0.602207601070404,
+        "delta_1_25": 0.9942700156985871,
+        "scale_aligned_abs_rel_diagnostic": 0.017885282635688782,
+        "evaluation_only_scale_factor": 1.0959457159042358,
+        "constant_5m_abs_rel_baseline": 0.31548330187797546,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.06568698585033417,
+        "height_calibrated_rmse_m": 0.5000874400138855,
+        "geometry_ms": 8602.748599994811,
+        "detector_and_relative_depth_ms": 7085.186700001941
+      },
+      {
+        "seed": 203,
+        "split": "held_out",
+        "valid_depth_samples": 12730,
+        "metric_abs_rel": 0.14780858159065247,
+        "metric_rmse_m": 1.032697081565857,
+        "delta_1_25": 0.9939512961508248,
+        "scale_aligned_abs_rel_diagnostic": 0.026753654703497887,
+        "evaluation_only_scale_factor": 1.18620765209198,
+        "constant_5m_abs_rel_baseline": 0.3130497336387634,
+        "target_recall_iou_025": 1.0,
+        "matched_target_ids": [
+          "tv",
+          "cabinet",
+          "table",
+          "chair-0",
+          "chair-1",
+          "lamp"
+        ],
+        "ground_truth_target_count": 6,
+        "automatic_candidate_count": 7,
+        "tv_cabinet_ordering_correct_if_both_detected": true,
+        "height_calibrated_abs_rel": 0.08628108352422714,
+        "height_calibrated_rmse_m": 0.6518906354904175,
+        "geometry_ms": 7167.349399998784,
+        "detector_and_relative_depth_ms": 6768.761299994367
+      }
+    ]
+  },
+  "checkpoint": {
+    "model": "Ruicheng/moge-2-vitb-normal",
+    "revision": "ca5f0e07ff01d3e5a364c1d954ed12ee1814b368",
+    "sha256": "16b8110e86d5dc5a849db120ca96ef3a223fd30b0c9146d1d81db504073da5f6",
+    "bytes": 419110160
+  },
+  "upstream_code": {
+    "moge": "74fbce054ebed49800de42d0ad0e83495065719a",
+    "utils3d_moge": "62f09d58509485564e24d5d9f6aac9ee9ebc0c37"
+  },
+  "verification": {
+    "python_tests_passed": 10,
+    "unity_compile_errors": 0,
+    "unity_compile_warnings": 0,
+    "standalone": {
+      "passed": true,
+      "frames_advance": true,
+      "surface_meshes_loaded": true,
+      "tv_left_of_cabinet": true,
+      "source_view_nonblank": true,
+      "surface_groups": 14,
+      "vertices": 279344,
+      "triangles": 535137,
+      "scope": "Standalone visible-surface import, placement and rendering; no hidden-geometry claim"
+    },
+    "eight_round_trip_images_visually_reviewed": true
+  },
+  "standalone_build": {
+    "path": "unity/AutoSceneVR/Builds/Reconstruction/RoomReconstruction.exe",
+    "sha256": "f76f2b3c76a5951b76b4c5a38528f7f8df23795525d8836acc286e437b58bbf6",
+    "bytes": 667648
+  },
+  "local_only_artifacts": [
+    "outputs/reconstruction-benchmark/report.html",
+    "outputs/reconstruction-benchmark/comparison-grid.png",
+    "outputs/reconstruction-coco139-seam-refined",
+    "outputs/reconstruction-coco139-automatic",
+    "outputs/reconstruction-player-20261116T172140381Z"
+  ],
+  "remaining_work": [
+    "Broader asset families and real measured rooms",
+    "Better automatic instance segmentation",
+    "Complete assets with image/depth-constrained registration",
+    "Interaction proxies and articulation validation",
+    "Acquisition-to-display and neural synchronization measurements"
+  ]
+}

@@ -15,13 +15,14 @@ def sync(device):
 class Baseline:
     def __init__(self, config, device):
         self.config, self.device = config, device
-        self.detector_processor = AutoProcessor.from_pretrained(config["detector"], revision=config["detector_revision"])
+        local = bool(config.get("local_files_only", False))
+        self.detector_processor = AutoProcessor.from_pretrained(config["detector"], revision=config["detector_revision"], local_files_only=local)
         self.detector = AutoModelForZeroShotObjectDetection.from_pretrained(
-            config["detector"], revision=config["detector_revision"], use_safetensors=True
+            config["detector"], revision=config["detector_revision"], use_safetensors=True, local_files_only=local
         ).eval().to(device)
-        self.depth_processor = AutoImageProcessor.from_pretrained(config["depth_model"], revision=config["depth_revision"], use_fast=False)
+        self.depth_processor = AutoImageProcessor.from_pretrained(config["depth_model"], revision=config["depth_revision"], use_fast=False, local_files_only=local)
         self.depth = AutoModelForDepthEstimation.from_pretrained(
-            config["depth_model"], revision=config["depth_revision"], use_safetensors=True
+            config["depth_model"], revision=config["depth_revision"], use_safetensors=True, local_files_only=local
         ).eval().to(device)
         self.model_info = {
             "detector": {"id": config["detector"], "revision": self.detector.config._commit_hash},

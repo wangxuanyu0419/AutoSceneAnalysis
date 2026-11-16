@@ -19,5 +19,8 @@ dependencies = [
 [project.scripts]
 autoscene = "autoscene.cli:main"
 
+[project.optional-dependencies]
+reconstruction = ["scipy==1.15.3", "opencv-python-headless==4.11.0.86"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

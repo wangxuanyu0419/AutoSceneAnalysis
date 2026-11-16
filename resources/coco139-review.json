@@ -1,0 +1,439 @@
+{
+  "image_size_px": [
+    640,
+    426
+  ],
+  "evidence": "Assistant-reviewed 2D image coordinates for the public reference; no measured 3D positions",
+  "observations": [
+    {
+      "id": "tv_01",
+      "label": "television",
+      "bbox_xyxy_px": [
+        8,
+        166,
+        155,
+        263
+      ],
+      "polygon_px": [
+        [
+          10,
+          167
+        ],
+        [
+          153,
+          174
+        ],
+        [
+          153,
+          254
+        ],
+        [
+          8,
+          260
+        ]
+      ],
+      "evidence": "reviewed visible TV outline"
+    },
+    {
+      "id": "console_01",
+      "label": "TV console",
+      "bbox_xyxy_px": [
+        0,
+        262,
+        216,
+        339
+      ],
+      "polygon_px": [
+        [
+          0,
+          274
+        ],
+        [
+          194,
+          263
+        ],
+        [
+          215,
+          268
+        ],
+        [
+          215,
+          314
+        ],
+        [
+          0,
+          339
+        ]
+      ],
+      "evidence": "reviewed visible console outline"
+    },
+    {
+      "id": "mirror_01",
+      "label": "wall mirror",
+      "bbox_xyxy_px": [
+        8,
+        40,
+        174,
+        127
+      ],
+      "polygon_px": [
+        [
+          13,
+          41
+        ],
+        [
+          173,
+          65
+        ],
+        [
+          168,
+          125
+        ],
+        [
+          8,
+          104
+        ]
+      ],
+      "evidence": "reviewed visible mirror outline"
+    },
+    {
+      "id": "window_01",
+      "label": "left window",
+      "bbox_xyxy_px": [
+        202,
+        52,
+        289,
+        218
+      ],
+      "polygon_px": [
+        [
+          213,
+          53
+        ],
+        [
+          286,
+          66
+        ],
+        [
+          282,
+          211
+        ],
+        [
+          203,
+          217
+        ]
+      ],
+      "evidence": "reviewed window surround"
+    },
+    {
+      "id": "window_02",
+      "label": "middle window",
+      "bbox_xyxy_px": [
+        304,
+        78,
+        370,
+        221
+      ],
+      "polygon_px": [
+        [
+          312,
+          79
+        ],
+        [
+          367,
+          91
+        ],
+        [
+          365,
+          215
+        ],
+        [
+          304,
+          220
+        ]
+      ],
+      "evidence": "reviewed window surround"
+    },
+    {
+      "id": "window_03",
+      "label": "right window",
+      "bbox_xyxy_px": [
+        374,
+        105,
+        430,
+        222
+      ],
+      "polygon_px": [
+        [
+          383,
+          106
+        ],
+        [
+          427,
+          112
+        ],
+        [
+          426,
+          216
+        ],
+        [
+          374,
+          221
+        ]
+      ],
+      "evidence": "reviewed window surround"
+    },
+    {
+      "id": "radiator_01",
+      "label": "radiator",
+      "bbox_xyxy_px": [
+        213,
+        229,
+        295,
+        307
+      ],
+      "polygon_px": [
+        [
+          216,
+          232
+        ],
+        [
+          293,
+          232
+        ],
+        [
+          292,
+          298
+        ],
+        [
+          214,
+          305
+        ]
+      ],
+      "evidence": "reviewed visible radiator"
+    },
+    {
+      "id": "table_01",
+      "label": "dining table",
+      "bbox_xyxy_px": [
+        292,
+        214,
+        438,
+        316
+      ],
+      "polygon_px": [
+        [
+          295,
+          216
+        ],
+        [
+          418,
+          214
+        ],
+        [
+          437,
+          227
+        ],
+        [
+          301,
+          242
+        ],
+        [
+          318,
+          314
+        ],
+        [
+          311,
+          314
+        ],
+        [
+          301,
+          239
+        ]
+      ],
+      "evidence": "reviewed tabletop and one visible leg; other support geometry remains occluded"
+    },
+    {
+      "id": "cabinet_01",
+      "label": "upper kitchen cabinet",
+      "bbox_xyxy_px": [
+        475,
+        137,
+        527,
+        176
+      ],
+      "polygon_px": [
+        [
+          476,
+          139
+        ],
+        [
+          524,
+          138
+        ],
+        [
+          526,
+          175
+        ],
+        [
+          476,
+          170
+        ]
+      ],
+      "evidence": "reviewed cabinet on right rear alcove"
+    },
+    {
+      "id": "cabinet_02",
+      "label": "lower kitchen cabinet",
+      "bbox_xyxy_px": [
+        462,
+        219,
+        544,
+        294
+      ],
+      "polygon_px": [
+        [
+          464,
+          223
+        ],
+        [
+          541,
+          220
+        ],
+        [
+          541,
+          282
+        ],
+        [
+          465,
+          293
+        ]
+      ],
+      "evidence": "reviewed lower kitchen units; person occludes left boundary"
+    },
+    {
+      "id": "fireplace_01",
+      "label": "fireplace",
+      "bbox_xyxy_px": [
+        550,
+        146,
+        640,
+        340
+      ],
+      "polygon_px": [
+        [
+          553,
+          148
+        ],
+        [
+          639,
+          147
+        ],
+        [
+          639,
+          337
+        ],
+        [
+          550,
+          339
+        ]
+      ],
+      "evidence": "reviewed visible fireplace and surround"
+    },
+    {
+      "id": "vase_01",
+      "label": "green vase",
+      "bbox_xyxy_px": [
+        549,
+        303,
+        589,
+        401
+      ],
+      "polygon_px": [
+        [
+          580,
+          303
+        ],
+        [
+          573,
+          340
+        ],
+        [
+          585,
+          374
+        ],
+        [
+          580,
+          396
+        ],
+        [
+          556,
+          398
+        ],
+        [
+          550,
+          383
+        ],
+        [
+          556,
+          348
+        ],
+        [
+          573,
+          318
+        ]
+      ],
+      "evidence": "reviewed visible vase body"
+    },
+    {
+      "id": "lamp_01",
+      "label": "ceiling light",
+      "bbox_xyxy_px": [
+        220,
+        0,
+        328,
+        63
+      ],
+      "polygon_px": [
+        [
+          223,
+          8
+        ],
+        [
+          270,
+          0
+        ],
+        [
+          285,
+          21
+        ],
+        [
+          321,
+          34
+        ],
+        [
+          327,
+          54
+        ],
+        [
+          310,
+          61
+        ],
+        [
+          278,
+          46
+        ],
+        [
+          257,
+          39
+        ],
+        [
+          222,
+          29
+        ]
+      ],
+      "evidence": "reviewed visible ceiling light"
+    }
+  ],
+  "image_rgb_sha256": "49e1682eddd63940370376db6dbbc90aaf08a758dd5731ac7479e73cac57f5c1"
+}

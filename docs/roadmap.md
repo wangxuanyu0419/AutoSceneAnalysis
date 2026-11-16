@@ -15,6 +15,7 @@ Compare the current baseline with one mask-producing detector and one metric-geo
 | Research foundation | Briefings, source catalogue, architecture, and staged deployment plan | Implemented |
 | Photo interface | Real model inference, object/action JSON, timing, and mouse report | See first experiment |
 | Spatial control prototype | Editable room, virtual arm, Windows checks, Android stereo and synthetic decoder input | See [Unity experiment](../experiments/2026-11-16-unity.md) |
+| Image-grounded surface reconstruction | Correct reference placement and eight automatic procedural round trips with independent depth scores | See [reconstruction experiment](../experiments/2026-11-16-reconstruction.md) |
 | Phone VR fit and timing | Viewer profile, wearer head rotation, seated alignment, sustained frame timing | Next simulation check |
 | Room target evaluation | Held-out recall, precision, part recall, and latency | Next |
 | Metric geometry | Measured surface-point error and camera convention checks | Planned |

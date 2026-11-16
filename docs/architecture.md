@@ -2,6 +2,8 @@
 
 The system has two main streams. Perception maintains the available targets and their context. Neural decoding estimates a user's choice against a versioned target set. The baseline implements the photo-to-menu path and a mouse-driven selection preview.
 
+The [reconstruction workflow](reconstruction-workflow.md) adds image-grounded surface geometry and procedural evaluation. Its geometry, object identity, unknown action feasibility and decoder intention remain separate fields in the exported scene.
+
 ```mermaid
 flowchart LR
     A[Photo or camera frames] --> B[Object and part regions]

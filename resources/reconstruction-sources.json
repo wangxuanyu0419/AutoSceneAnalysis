@@ -1,0 +1,13 @@
+{
+  "reviewed_on": "2026-11-16",
+  "scope": "Single-photo scene reconstruction, object placement and procedural evaluation",
+  "sources": [
+    {"id":"moge2_local","title":"MoGe-2","url":"https://github.com/microsoft/MoGe","paper":"https://arxiv.org/abs/2507.02546","use":"Implemented dense geometry backend; camera-space points, normals and intrinsics","tested_checkpoint":"Ruicheng/moge-2-vitb-normal","checkpoint_revision":"ca5f0e07ff01d3e5a364c1d954ed12ee1814b368","code_revision":"74fbce054ebed49800de42d0ad0e83495065719a"},
+    {"id":"diorama","title":"Diorama: Unleashing Zero-shot Single-view 3D Scene Modeling","year":2025,"url":"https://3dlg-hcvc.github.io/diorama/","code":"https://github.com/3dlg-hcvc/diorama","paper":"https://arxiv.org/abs/2411.19492","use":"Architecture reconstruction, CAD retrieval, object pose and joint layout optimization","review_basis":"Official project, ICCV publication and setup/inference README","deployment":"Not run here; official setup combines multiple GPU libraries, pretrained components and asset retrieval"},
+    {"id":"mira_scene","title":"Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction","year":2026,"url":"https://arxiv.org/abs/2609.23796","use":"Canonical-to-scene pixel correspondences for object alignment","review_basis":"Author paper and project link; not locally benchmarked","deployment":"Research candidate; no local accuracy or speed claim"},
+    {"id":"unravel","title":"Unravel: Recovering an Interactive 3D Scene from a Single Image","year":2026,"url":"https://arxiv.org/abs/2610.16146","code":"https://github.com/SII-Hui/Unravel","use":"Occlusion-aware deconstruction, support-order recomposition and placement audits","review_basis":"Author paper and official repository","deployment":"Public quickstart says coming soon at review date"},
+    {"id":"sam3d_objects","title":"SAM 3D Objects","url":"https://github.com/facebookresearch/sam-3d-objects","setup":"https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md","use":"Independent completed object meshes from image regions","deployment":"Not run here; official setup requests Linux, at least 32 GB VRAM and gated checkpoint access"},
+    {"id":"blenderproc","title":"BlenderProc","url":"https://github.com/DLR-RM/BlenderProc","use":"Larger photorealistic procedural rendering and evaluation datasets","deployment":"Design reference; current benchmark is implemented in the existing Unity editor"},
+    {"id":"procthor","title":"ProcTHOR","url":"https://procthor.allenai.org/","use":"Procedural indoor scene diversity for embodied-AI evaluation","deployment":"Design reference; not used to generate the measured eight-room dataset"}
+  ]
+}

@@ -14,6 +14,7 @@ The briefings form a short course. Each can also be read independently.
 4. [Local demo and deployment](briefings/04-local-demo-and-deployment.md) — commands, hardware, and staged implementation.
 5. [The neural interface](briefings/05-the-neural-interface.md) — target/action decoding, vectors, identity, and timing.
 6. [Accuracy and delay](briefings/06-accuracy-delay-and-evaluation.md) — how to decide whether the system is useful enough.
+7. [Reconstructing the room faithfully](briefings/07-reconstructing-the-room-faithfully.md) — image-grounded geometry and a generate–render–reconstruct benchmark.
 
 ## Research recommendation
 
@@ -38,6 +39,8 @@ See the [first experiment](experiments/2026-11-16-baseline.md) for the measured 
 On this workstation, open the already generated [RTX 2060 report](outputs/coco-rtx2060/report.html) or [synthetic interface example](outputs/interface-example/report.html). These are local generated files and are not part of a Git clone.
 
 ## Unity room simulation
+
+The [image-grounded reconstruction workflow](docs/reconstruction-workflow.md) now replaces hand-placed furniture as the route from a photo to geometry. It uses MoGe-2, separate object regions and a camera-matched Unity import. The [reconstruction experiment](experiments/2026-11-16-reconstruction.md) reports eight procedural round trips, independent depth scores and the corrected reference view. This recovers visible surfaces; unseen completion and articulation remain separate stages.
 
 The new [Unity quickstart](docs/unity-quickstart.md) describes the editable room, object/action controls, virtual hand and robot arm, Android phone viewing, and the decoder-input boundary. The project is under `unity/AutoSceneVR`, targeting Unity 6000.4.7f1. [Simulation design](docs/vr-simulation-design.md) explains the relationship between the photo, the authored room, and future neural input.
 

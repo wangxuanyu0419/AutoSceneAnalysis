@@ -1,5 +1,7 @@
 # Using the room simulation
 
+This page describes the original authored hand/robot task. For the corrected image-derived room and automatic round-trip tests, use the [reconstruction workflow](reconstruction-workflow.md). Its standalone viewer is separate from the original task and Android prototype.
+
 Open `unity/AutoSceneVR` in Unity 6000.4.7f1. The project uses the Universal Render Pipeline and Google's Cardboard SDK for Android phone viewers. The original photo's broad layout is recreated as editable furniture: wood floor, three rear windows, dining table and chairs, television, kitchen cabinets, fireplace, and a green vase. A mug, book, and placement tray are added experiment props.
 
 The units are Unity metres, with provisional authored dimensions. The initial single-image pipeline supplies neither measured room dimensions nor the hidden surfaces used by this simulation.
